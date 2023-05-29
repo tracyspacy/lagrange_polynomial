@@ -1,0 +1,17 @@
+{
+  "name": "lagrange_polynomial",
+  "version": "1.0.0",
+  "description": "",
+  "scripts": {
+    "ganache": "ganache-cli --networkId 4447",
+    "migrate": "truffle migrate --reset",
+    "interpolate": "node scripts/LagrangeInterpolation.js"
+  },
+  "author": "tracyspacy",
+  "license": "MIT",
+  "dependencies": {
+    "ganache": "^7.8.0",
+    "prompt-sync": "^4.2.0",
+    "truffle": "^5.9.2"
+  }
+}
