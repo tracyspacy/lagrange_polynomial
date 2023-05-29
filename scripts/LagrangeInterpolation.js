@@ -26,13 +26,13 @@ async function getAccounts() {
 }
 
 async function main(){
-  var xValues = JSON.parse(prompt('Enter xValues (as an array):'));
-  var yValues = JSON.parse(prompt('Enter yValues (as an array):'));
-  var xArray = JSON.parse(prompt('Enter x Values (as an array):'));
+  var xValues = JSON.parse(prompt('NODES_DATA : Enter the x-coordinates of the known data points (as an array):'));
+  var yValues = JSON.parse(prompt('NODES_DATA : Enter the y-coordinates of the known data points (as an array):'));
+  var xArray = JSON.parse(prompt('Enter the x-coordinates of the interpolation points (as an array):'));
   let LagrangePolynomialAddr = getContractAddr(networkId);
   var LagrangePolynomial = await initContract(LagrangePolynomialJson.abi,LagrangePolynomialAddr);
   var cur_accounts =  await getAccounts();
-  
+
   for(let i=0;i<xArray.length;i++){
   	var interpolatedValue = await LagrangePolynomial.methods.calculateLagrangePolynomial(xValues,yValues,xArray[i]).call();
   	console.log(`interpolatedValue(${xArray[i]}) = ${interpolatedValue / Math.pow(10, 6)}`);
