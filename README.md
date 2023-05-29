@@ -47,3 +47,7 @@ The script will then calculate the interpolated y-values at the specified interp
 | 61  | -128       | -119.938272    |
 | 68  | -270       | -275.567902    |
 | 75  | -518       | -518           |
+
+## Potential Application
+
+Lagrange interpolation can be potentially used to estimate missing historical price data points based on available data for example for DeFi applications.
